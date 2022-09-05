@@ -80,17 +80,20 @@ test -r ${RKBIN}/${BL31} || (echo "${RKBIN}/${BL31} not found"; false)
 
 build_uefitools
 
-# Quartz64 boards
-build_uefi Pine64 Quartz64
-build_fit Quartz64 rk3566-quartz64-a
-# SOQuartz modules
-build_uefi Pine64 SOQuartz
-build_fit SOQuartz rk3566-soquartz-cm4
-# ROC-RK356x-PC boards
-build_uefi Firefly ROC-RK3566-PC
-build_fit ROC-RK3566-PC rk3566-firefly-roc-pc
-build_uefi Firefly ROC-RK3568-PC
-build_fit ROC-RK3568-PC rk3568-firefly-roc-pc
+## Quartz64 boards
+#build_uefi Pine64 Quartz64
+#build_fit Quartz64 rk3566-quartz64-a
+## SOQuartz modules
+#build_uefi Pine64 SOQuartz
+#build_fit SOQuartz rk3566-soquartz-cm4
+## ROC-RK356x-PC boards
+#build_uefi Firefly ROC-RK3566-PC
+#build_fit ROC-RK3566-PC rk3566-firefly-roc-pc
+#build_uefi Firefly ROC-RK3568-PC
+#build_fit ROC-RK3568-PC rk3568-firefly-roc-pc
+# BPI-R2PRO board
+build_uefi BananaPI BPI-R2PRO
+build_fit BPI-R2PRO rk3568-bpi-r2-pro
 
 build_idblock
 

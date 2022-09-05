@@ -93,14 +93,14 @@
 #define PMU_NOC_AUTO_CON0                     (PMU_BASE + 0x0070)
 #define PMU_NOC_AUTO_CON1                     (PMU_BASE + 0x0074)
 
-STATIC CONST GPIO_IOMUX_CONFIG mSdmmc2IomuxConfig[] = {
-  { "sdmmc2_d0m0",        3, GPIO_PIN_PC6, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
-  { "sdmmc2_d1m0",        3, GPIO_PIN_PC7, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
-  { "sdmmc2_d2m0",        3, GPIO_PIN_PD0, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
-  { "sdmmc2_d3m0",        3, GPIO_PIN_PD1, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
-  { "sdmmc2_cmdm0",       3, GPIO_PIN_PD2, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
-  { "sdmmc2_clkm0",       3, GPIO_PIN_PD3, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
-};
+/*STATIC CONST GPIO_IOMUX_CONFIG mSdmmc2IomuxConfig[] = {
+  { "sdmmc0_d0m0",        1, GPIO_PIN_PD5, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
+  { "sdmmc0_d1m0",        1, GPIO_PIN_PD6, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
+  { "sdmmc0_d2m0",        1, GPIO_PIN_PD7, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
+  { "sdmmc0_d3m0",        2, GPIO_PIN_PA0, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
+  { "sdmmc0_cmdm0",       2, GPIO_PIN_PA1, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
+  { "sdmmc0_clkm0",       2, GPIO_PIN_PA1, 3, GPIO_PIN_PULL_UP,   GPIO_PIN_DRIVE_2 },
+};*/
 
 STATIC
 EFI_STATUS
@@ -268,10 +268,10 @@ BoardInitPmic (
 
   GpioPinSetPull (0, GPIO_PIN_PB1, GPIO_PIN_PULL_NONE);
   GpioPinSetInput (0, GPIO_PIN_PB1, GPIO_PIN_INPUT_SCHMITT);
-  GpioPinSetFunction (0, GPIO_PIN_PB1, 1);
+  GpioPinSetFunction (0, GPIO_PIN_PB1, 1);			// Set GPIO0_B1 to I2C0_SCL
   GpioPinSetPull (0, GPIO_PIN_PB2, GPIO_PIN_PULL_NONE);
   GpioPinSetInput (0, GPIO_PIN_PB2, GPIO_PIN_INPUT_SCHMITT);
-  GpioPinSetFunction (0, GPIO_PIN_PB2, 1);
+  GpioPinSetFunction (0, GPIO_PIN_PB2, 1);			// Set GPIO0_B2 to I2C0_SDA
 
   Status = PmicRead (PMIC_CHIP_NAME, &Value);
   if (EFI_ERROR (Status)) {
@@ -293,7 +293,7 @@ BoardInitPmic (
 
   /* Check LD01 and LD09 are configured correctly. */
   PmicRead (PMIC_LDO1_ON_VSEL, &Value);
-  ASSERT (Value == 0x0c); /* 0.8V */
+  ASSERT (Value == 0x0c); /* 0.9V */
   PmicRead (PMIC_LDO9_ON_VSEL, &Value);
   ASSERT (Value == 0x30); /* 1.8V */
 

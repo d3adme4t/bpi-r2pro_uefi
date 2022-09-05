@@ -17,8 +17,8 @@ DefinitionBlock ("DsdtTable.aml", "DSDT",
     include ("Tsadc.asl") # thermal sensors
     include ("Uart.asl")
     include ("Usb3.asl")
-#    include ("Mshc.asl") # SDIO
-#    include ("Emmc.asl") # eMMC
+    include ("Mshc.asl") # SDIO
+    include ("Emmc.asl") # eMMC
 
   } // Scope (_SB)
 }
