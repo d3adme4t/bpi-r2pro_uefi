@@ -335,7 +335,7 @@ BoardInitDriverEntryPoint (
 
   BoardInitPmic ();
 
-  /* I2C5 bus, used for RTC */
+  /* I2C3 bus, used for RTC */
   GpioPinSetPull (1, GPIO_PIN_PA1, GPIO_PIN_PULL_NONE);
   GpioPinSetInput (1, GPIO_PIN_PA1, GPIO_PIN_INPUT_SCHMITT);
   GpioPinSetFunction (1, GPIO_PIN_PA1, 1);
@@ -358,6 +358,9 @@ BoardInitDriverEntryPoint (
   /* Configure MULTI-PHY 0 and 1 for USB3 mode */
   MultiPhySetMode (0, MULTIPHY_MODE_USB3);
   MultiPhySetMode (1, MULTIPHY_MODE_USB3);
+  /* Configure MULTI-PHY 2 for SATA mode */
+  MultiPhySetMode (1, MULTIPHY_MODE_SATA);
+
 
   /* Set GPIO0 PA6 (USB_HOST5V_EN) output high to power USB ports */
   GpioPinSetDirection (0, GPIO_PIN_PA6, GPIO_PIN_OUTPUT);
