@@ -359,7 +359,7 @@ BoardInitDriverEntryPoint (
   MultiPhySetMode (0, MULTIPHY_MODE_USB3);
   MultiPhySetMode (1, MULTIPHY_MODE_USB3);
   /* Configure MULTI-PHY 2 for SATA mode */
-  MultiPhySetMode (1, MULTIPHY_MODE_SATA);
+  MultiPhySetMode (2, MULTIPHY_MODE_SATA);
 
 
   /* Set GPIO0 PA6 (USB_HOST5V_EN) output high to power USB ports */
