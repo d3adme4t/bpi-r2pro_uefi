@@ -427,9 +427,9 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdImageProtectionPolicy|0x3
   gRk356xTokenSpaceGuid.PcdPlatformName|"BananaPI R2-PRO"
   gRk356xTokenSpaceGuid.PcdCpuName|"Rockchip RK3568 (Cortex-A55)"
-  gRk356xTokenSpaceGuid.PcdPlatformVendorName|"Firefly"
+  gRk356xTokenSpaceGuid.PcdPlatformVendorName|"Sinovoip"
   gRk356xTokenSpaceGuid.PcdFamilyName|"BPI-R2PRO"
-  gRk356xTokenSpaceGuid.PcdProductUrl|"https://en.t-firefly.com/product/industry/rocrk3568pc.html"
+  gRk356xTokenSpaceGuid.PcdProductUrl|"https://wiki.banana-pi.org/Banana_Pi_BPI-R2_Pro"
   gRk356xTokenSpaceGuid.PcdMemoryVendorName|"Unknown"
 
   #
