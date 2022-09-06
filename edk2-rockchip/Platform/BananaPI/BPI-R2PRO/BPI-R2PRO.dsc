@@ -477,9 +477,9 @@
   gRk356xTokenSpaceGuid.PcdMshc2NonRemovable|TRUE
 
   #
-  # RTC support (hym8563 at 0x51 on I2C5)
+  # RTC support (hym8563 at 0x51 on I2C3)
   #
-  gRk356xTokenSpaceGuid.PcdRtcI2cBusBase|0xFE5E0000
+  gRk356xTokenSpaceGuid.PcdRtcI2cBusBase|0xFE5C0000
   gRk356xTokenSpaceGuid.PcdRtcI2cAddr|0x51
 
 [PcdsDynamicHii.common.DEFAULT]
