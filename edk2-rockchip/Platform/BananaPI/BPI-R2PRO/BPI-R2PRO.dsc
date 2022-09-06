@@ -472,9 +472,9 @@
   #
   # The ROC-RK3568-PC has a WiFi card on the third MSHC
   #
-  gRk356xTokenSpaceGuid.PcdMshc2Status|0xF
-  gRk356xTokenSpaceGuid.PcdMshc2SdioIrq|TRUE
-  gRk356xTokenSpaceGuid.PcdMshc2NonRemovable|TRUE
+  ##gRk356xTokenSpaceGuid.PcdMshc2Status|0xF
+  ##gRk356xTokenSpaceGuid.PcdMshc2SdioIrq|TRUE
+  ##gRk356xTokenSpaceGuid.PcdMshc2NonRemovable|TRUE
 
   #
   # RTC support (hym8563 at 0x51 on I2C3)
