@@ -613,7 +613,7 @@
   #
   # Devicetree support
   #
-  # Platform/BananaPI/BPI-R2PRO/Drivers/FdtDxe/FdtDxe.inf
+  # Platform/Rockchip/Rk356x/Drivers/FdtDxe/FdtDxe.inf
 
   #
   # ACPI Support
