@@ -291,6 +291,10 @@ BoardInitPmic (
   DEBUG ((DEBUG_INFO, "PMIC: Detected RK%03X ver 0x%X\n", ChipName, ChipVer));
   ASSERT (ChipName == 0x809);
 
+  // Set LDO1 and LDO9 voltage
+  PmicWrite (PMIC_LDO1_ON_VSEL, 0x0c);
+  PmicWrite (PMIC_LDO9_ON_VSEL, 0x30);
+
   /* Check LD01 and LD09 are configured correctly. */
   PmicRead (PMIC_LDO1_ON_VSEL, &Value);
   ASSERT (Value == 0x0c); /* 0.9V */
