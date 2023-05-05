@@ -103,9 +103,9 @@ for board in ${RKUEFIBOARDS}; do
 		build_uefi Firefly ROC-RK3568-PC
 		build_fit ROC-RK3568-PC rk3568-firefly-roc-pc
 		;;
-  BPI-R2PRO)
-    build_uefi BananaPI BPI-R2PRO
-    build_fit BPI-R2PRO rk3568-bpi-r2-pro
+	BPI-R2PRO)
+		build_uefi BananaPI BPI-R2PRO
+		build_fit BPI-R2PRO rk3568-bpi-r2-pro
 		;;
 	*)
 		echo "Unknown board ${board}"
