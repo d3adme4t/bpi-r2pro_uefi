@@ -1,4 +1,4 @@
-BOARDS ?= QUARTZ64 SOQUARTZ ROC-RK3566-PC ROC-RK3568-PC
+BOARDS ?= QUARTZ64 SOQUARTZ ROC-RK3566-PC ROC-RK3568-PC BPI-R2PRO
 TARGET ?= RELEASE
 
 .PHONY: all
@@ -17,9 +17,7 @@ sdcard: uefi
 	parted -s sdcard.img unit s mkpart uboot 8MiB 16MiB
 	parted -s sdcard.img unit s mkpart env 16MiB 32MiB
 
-
 	for board in $(BOARDS); do							\
-
 		cp sdcard.img $${board}_EFI.img;				\
 		dd if=idblock.bin of=$${board}_EFI.img 			\
 		    seek=64 conv=notrunc;						\
