@@ -1,4 +1,3 @@
-#### 2022-07-20
+#### v1.1
 
-* Generate UUID and serial number in SMBIOS.
-* Support building with newer GCC versions.
+* Fix possible memory corruption by OHCI controller at boot.
