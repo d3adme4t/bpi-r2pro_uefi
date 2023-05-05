@@ -84,6 +84,7 @@ test -r ${RKBIN}/${BL31} || (echo "${RKBIN}/${BL31} not found"; false)
 
 build_uefitools
 
+
 for board in ${RKUEFIBOARDS}; do
 	case ${board} in
 	QUARTZ64)
@@ -102,12 +103,17 @@ for board in ${RKUEFIBOARDS}; do
 		build_uefi Firefly ROC-RK3568-PC
 		build_fit ROC-RK3568-PC rk3568-firefly-roc-pc
 		;;
+  BPI-R2PRO)
+    build_uefi BananaPI BPI-R2PRO
+    build_fit BPI-R2PRO rk3568-bpi-r2-pro
+		;;
 	*)
 		echo "Unknown board ${board}"
 		exit 1
 		;;
 	esac
 done
+
 
 build_idblock
 
