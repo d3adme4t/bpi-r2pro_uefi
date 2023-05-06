@@ -487,6 +487,11 @@
 [PcdsDynamicHii.common.DEFAULT]
 
   #
+  # Reset-related.
+  #
+  gRk356xTokenSpaceGuid.PcdPlatformResetDelay|L"ResetDelay"|gRk356xTokenSpaceGuid|0x0|0
+
+  #
   # ConfigDxe
   #
   gRk356xTokenSpaceGuid.PcdSystemTableMode|L"SystemTableMode"|gConfigDxeFormSetGuid|0x0|0
