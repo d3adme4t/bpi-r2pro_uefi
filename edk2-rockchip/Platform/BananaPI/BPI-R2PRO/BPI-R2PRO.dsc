@@ -487,6 +487,15 @@
 [PcdsDynamicHii.common.DEFAULT]
 
   #
+  # ConfigDxe
+  #
+  gRk356xTokenSpaceGuid.PcdSystemTableMode|L"SystemTableMode"|gConfigDxeFormSetGuid|0x0|0
+  gRk356xTokenSpaceGuid.PcdCpuClock|L"CpuClock"|gConfigDxeFormSetGuid|0x0|2
+  gRk356xTokenSpaceGuid.PcdCustomCpuClock|L"CustomCpuClock"|gConfigDxeFormSetGuid|0x0|816
+  gRk356xTokenSpaceGuid.PcdMultiPhy1Mode|L"MultiPhy1Mode"|gConfigDxeFormSetGuid|0x0|0
+  gRk356xTokenSpaceGuid.PcdFanMode|L"FanMode"|gConfigDxeFormSetGuid|0x0|1
+
+  #
   # Common UEFI ones.
   #
 
